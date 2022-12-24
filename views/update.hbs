@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Store in Ha Noi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .row.content {height: 600px}
+
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+     <div class="col-sm-3 bg-info p-3">
+      <h4>ATN Toys Store</h4>
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">
+                <img  height="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_GQMSEy3c0CI6FiA2kxRB3qqcKCUqnFQKDw&usqp=CAU" alt="Avatar Logo" style="width:100px;" class="rounded-pill">
+              </a>
+            </div>
+          </nav></li>
+          
+          <li><a href="/products">ATN store in Ha Noi</a></li>
+          <li><a href="/products2">ATn store in Ho Chi Minh City</a></li>
+        </ul><br>
+    </div>
+    <div class="col-sm-9">
+     <form action="/doSearchProducts" method="post">
+        Name <input type="text" name="txtName" id="">
+        <input type="submit" value="Search">
+    </form>
+    <br>
+    <button><a href="insertProducts2">Add new products</a></button>
+    <hr>
+    <table class="table bordered">
+        <thead>
+             <tr>
+              <th>ID Product</th>
+              <th>Name</th>
+              <th>Size</th>  
+              <th>Price</th>
+              <th>Amount</th>
+              <th>Describe</th>
+              <th>Picture URL</th>
+            </tr>
+        </thead>
+<form action="/doupdate" method="post">
+        {{#each model}}
+        <tr>
+            <input type="hidden" name="id" value="{{_id}}">
+            <td><input type="text" value= "{{id_product}}" name = "txtId" id=""></td>
+            <td><input type="text" value= "{{name}}" name = "txtName" id=""></td>
+            <td><input type="text" value= "{{size}}" name = "txtSize" id="" ></td>
+            <td><input type="text" value= "{{price}}" name = "txtPrice" id=""></td>
+            <td><input type="text" value= "{{amount}}" name = "txtAmount" id=""></td>
+            <td><input type="text" value= "{{describe}}" name = "txtDescribe" id=""></td>
+            <td><input type="text" value= "{{pic}}" name = "txtPic" id=""></td>
+            <td><input type="submit" value="Update" class="btn btn-outline-success" ></td>
+        </tr>      
+        {{/each}}
+ </form>
+        
+    </table>
+      <br><br>
+      
+      
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p style="margin-top: 10px; margin-bottom: 10px; margin-right: 150px; margin-left: 600px;">© 2022 Copyright:ATN Toys store</p>
+</footer>
+
+</body>
+</html> 

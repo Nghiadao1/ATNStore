@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Store in Ha Noi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .row.content {
+      height: 600px
+    }
+
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+
+      .row.content {
+        height: auto;
+      }
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-field {
+      position: relative;
+      margin-top: 2rem;
+    }
+
+    .input-field input {
+      padding: 0.8rem;
+    }
+
+    form .input-field:first-child {
+      margin-bottom: 1.5rem;
+    }
+
+    form input[type="submit"] {
+      background: linear-gradient(to left, #4776E6, #8e54e9);
+      color: white;
+      border-radius: 4px;
+      margin-top: 2rem;
+      padding: 0.4rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-sm-12 sidenav">
+        <form action="/user" method="post">
+          <h2>Login ATN Admin</h2>
+          <div class="input-field">
+            <input type="text" name="username" id="username" placeholder="Enter Username">
+          </div>
+          <div class="input-field">
+            <input type="password" name="password" id="password" placeholder="Enter Password">
+          </div>
+          <input type="submit" value="LogIn">
+        </form>
+</body>
+</div>
+</div>
+</div>
+{{!-- <footer class="container-fluid">
+  <p style="margin-top: 10px; margin-bottom: 10px; margin-right: 150px; margin-left: 600px;">© 2022 Copyright:ATN Toys
+    store</p>
+</footer> --}}
+
+</html>
